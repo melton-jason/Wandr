@@ -1,7 +1,8 @@
 import googlemaps
 import json
+import os
 
-gmaps = googlemaps.Client(key='AIzaSyCI9jG8H0g5fWvHQL8lQ4sQN1_Gn6kyU30')
+gmaps = googlemaps.Client(key=os.environ['API_KEY'])
 
 def findCandsRoute(start, end):
     candidatePoints = generateCandPoints(start, end)
@@ -12,8 +13,6 @@ def findCandsRoute(start, end):
             allCands.add(processAttraction(attraction))
     return allCands
 
-def completePlaces(place):
-    return [place["description"] for place in gmaps.places_autocomplete(place)]
 
 def generateCandPoints(start, end):
     dirs = gmaps.directions(start, end, mode="driving")[0]

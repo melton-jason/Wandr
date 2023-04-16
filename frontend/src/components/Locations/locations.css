@@ -1,0 +1,12 @@
+.locations {
+    height: fit-content + 1;
+    overflow: auto;
+}
+
+table, th, td {
+    border: 1px solid;
+}
+
+th, td {
+    padding: 15px;
+}

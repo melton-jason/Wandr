@@ -1,0 +1,57 @@
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% {  transform: rotate(359deg); }
+}
+.globe {
+    animation: spin 20s linear infinite;
+}
+
+.globe {
+    position: relative;
+    color:whitesmoke;
+    width: 100px;
+    left: 30%;
+}
+
+.header {
+    height: 15%;
+    display: flex;
+    text-align: center;
+    background-image: linear-gradient(to bottom right, #514a49, #a4a4a0);
+    color: white;
+}
+
+.menu {
+    user-select: none;
+    margin-left: auto;
+    margin-right: 0;
+    position: relative;
+    color:whitesmoke;
+    float: right;
+}
+
+.menu:hover {
+    box-shadow: 0 0 11px rgba(0, 0, 0, 0.2); 
+    background-color: #7f7371;
+}
+
+.menu_wrapper {
+    width: fit-content;
+    height: 100%;
+    transition: height 1s;
+    background-color: rgb(57, 56, 56);
+}
+
+.menu_wrapper p {
+    font-size: larger;
+}
+
+h1 {
+    position: relative;
+    display: inline;
+    float: right;
+    width: 50%;
+    font-size: 2.8em;
+    font-weight: 800;
+    left: 15%;
+}
